@@ -1,6 +1,7 @@
 # Chatapp
 
 A new Flutter project.
+This project uses firebase .
 
 ## Getting Started
 
