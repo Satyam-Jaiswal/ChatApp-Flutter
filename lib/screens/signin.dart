@@ -1,4 +1,5 @@
 import 'package:Chatapp/necessities/theme.dart';
+import 'package:Chatapp/screens/signup.dart';
 import 'package:Chatapp/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -107,12 +108,20 @@ class _SignInState extends State<SignIn> {
                   "Don't have account? ",
                   style: simpleTextStyle(),
                 ),
-                Text(
-                  "Register now",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                      decoration: TextDecoration.underline),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SignUp()),
+                    );
+                  },
+                  child: Text(
+                    "Register now",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        decoration: TextDecoration.underline),
+                  ),
                 ),
               ],
             ),
