@@ -30,7 +30,7 @@ class _SignInState extends State<SignIn> {
                 children: [
                   TextFormField(
                     style: simpleTextStyle(),
-                    decoration: textFieldInputDecoration("email"),
+                    decoration: textFieldInputDecoration("Email"),
                   ),
                   TextFormField(
                     obscureText: true,
@@ -40,7 +40,7 @@ class _SignInState extends State<SignIn> {
                           : "Enter Password 6+ characters";
                     },
                     style: simpleTextStyle(),
-                    decoration: textFieldInputDecoration("password"),
+                    decoration: textFieldInputDecoration("Password"),
                   ),
                 ],
               ),

@@ -9,6 +9,10 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
+  TextEditingController emailEditingController = new TextEditingController();
+  TextEditingController passwordEditingController = new TextEditingController();
+  TextEditingController usernameEditingController = new TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +34,13 @@ class _SignUpState extends State<SignUp> {
                 children: [
                   TextFormField(
                     style: simpleTextStyle(),
-                    decoration: textFieldInputDecoration("email"),
+                     controller: usernameEditingController,
+                    decoration: textFieldInputDecoration("User Name"),
+                  ),
+                  TextFormField(
+                    style: simpleTextStyle(),
+                    controller: emailEditingController,
+                    decoration: textFieldInputDecoration("Email"),
                   ),
                   TextFormField(
                     obscureText: true,
@@ -39,18 +49,9 @@ class _SignUpState extends State<SignUp> {
                           ? null
                           : "Enter Password 6+ characters";
                     },
+                     controller: passwordEditingController,
                     style: simpleTextStyle(),
-                    decoration: textFieldInputDecoration("password"),
-                  ),
-                   TextFormField(
-                    obscureText: true,
-                    validator: (val) {
-                      return val.length > 6
-                          ? null
-                          : "Enter Password 6+ characters";
-                    },
-                    style: simpleTextStyle(),
-                    decoration: textFieldInputDecoration("confirm Password"),
+                    decoration: textFieldInputDecoration("Password"),
                   ),
                 ],
               ),
@@ -58,8 +59,6 @@ class _SignUpState extends State<SignUp> {
             SizedBox(
               height: 32,
             ),
-           
-           
             GestureDetector(
               onTap: () {
                 //TODO

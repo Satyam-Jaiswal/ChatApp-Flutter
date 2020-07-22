@@ -1,4 +1,5 @@
 import 'package:Chatapp/screens/signin.dart';
+import 'package:Chatapp/screens/signup.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: SignIn(),
+      home: SignUp(),
     );
   }
 }
