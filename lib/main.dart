@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       
         primarySwatch: Colors.blue,
 
-        scaffoldBackgroundColor: Color(0xff1F1F1F),
+        scaffoldBackgroundColor: Color(0xff070038),
       
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),

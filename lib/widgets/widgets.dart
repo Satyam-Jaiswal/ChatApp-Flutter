@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 Widget appBarMain(BuildContext context) {
   return AppBar(
+    backgroundColor: Colors.blueGrey,
     title: Image.asset(
       "assets/images/logo.png",
       height: 40,
