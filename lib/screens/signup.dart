@@ -23,6 +23,7 @@ class _SignUpState extends State<SignUp> {
   signUp() async {
     if (formKey.currentState.validate()) {
       setState(() {
+        
         isLoading = true;
       });
       await authService
