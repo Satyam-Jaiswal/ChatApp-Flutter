@@ -15,6 +15,7 @@ class _SignUpState extends State<SignUp> {
   TextEditingController emailEditingController = new TextEditingController();
   TextEditingController passwordEditingController = new TextEditingController();
   TextEditingController usernameEditingController = new TextEditingController();
+
   AuthService authService = new AuthService();
 
   final formKey = GlobalKey<FormState>();
@@ -23,7 +24,6 @@ class _SignUpState extends State<SignUp> {
   signUp() async {
     if (formKey.currentState.validate()) {
       setState(() {
-        
         isLoading = true;
       });
       await authService
@@ -63,6 +63,7 @@ class _SignUpState extends State<SignUp> {
                   ),
                   Spacer(),
                   Form(
+                    key: formKey,
                     child: Column(
                       children: [
                         TextFormField(
@@ -78,7 +79,7 @@ class _SignUpState extends State<SignUp> {
                         TextFormField(
                           validator: (val) {
                             return RegExp(
-                                        r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-      zA-Z0-9]+\.[a-zA-Z]+")
+                                        r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
                                     .hasMatch(val)
                                 ? null
                                 : "Enter correct email";
