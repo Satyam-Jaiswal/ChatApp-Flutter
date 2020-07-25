@@ -29,13 +29,15 @@ class _SignUpState extends State<SignUp> {
       await authService
           .signup(emailEditingController.text, passwordEditingController.text)
           .then((result) {
-        if (result != null) {
-          Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(
-                builder: (context) => ChatRoom(),
-              ));
-        }
+        // print("${result.uid}");
+
+        Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ChatRoom(),
+          ),
+          (Route<dynamic> route) => false,
+        );
       });
     }
   }

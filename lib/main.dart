@@ -1,4 +1,5 @@
-import 'package:Chatapp/screens/signin.dart';
+
+import 'package:Chatapp/screens/chatroom.dart';
 import 'package:Chatapp/screens/signup.dart';
 import 'package:flutter/material.dart';
 
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: SignUp(),
+      home: ChatRoom(),
     );
   }
 }
