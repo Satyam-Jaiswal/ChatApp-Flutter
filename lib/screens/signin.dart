@@ -1,9 +1,11 @@
 import 'package:Chatapp/necessities/theme.dart';
-import 'package:Chatapp/screens/signup.dart';
 import 'package:Chatapp/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 class SignIn extends StatefulWidget {
+  final Function toggle;
+  SignIn(this.toggle);
+
   @override
   _SignInState createState() => _SignInState();
 }
@@ -110,10 +112,8 @@ class _SignInState extends State<SignIn> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => SignUp()),
-                    );
+                   widget.toggle();
+                    
                   },
                   child: Text(
                     "Register now",
