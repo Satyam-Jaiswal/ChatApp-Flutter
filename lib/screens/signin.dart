@@ -17,16 +17,22 @@ class _SignInState extends State<SignIn> {
       // appBar: appBarMain(context),
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 24),
-        child: Column(
+        child: ListView(
           children: [
-            Spacer(),
+            // Spacer(),
+             SizedBox(
+                    height: 100,
+                  ),
             Center(
               child: Image.asset(
                 "assets/images/logo.png",
                 height: 100,
               ),
             ),
-            Spacer(),
+            // Spacer(),
+             SizedBox(
+                    height: 80,
+                  ),
             Form(
               child: Column(
                 children: [

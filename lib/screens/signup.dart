@@ -1,5 +1,6 @@
+import 'package:Chatapp/necessities/authenticate.dart';
 import 'package:Chatapp/necessities/theme.dart';
-import 'package:Chatapp/screens/signin.dart';
+// import 'package:Chatapp/screens/signin.dart';
 import 'package:Chatapp/services/auth.dart';
 import 'package:Chatapp/widgets/widgets.dart';
 import 'package:flutter/material.dart';
@@ -45,6 +46,7 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // resizeToAvoidBottomInset: false,
       // appBar: appBarMain(context),
       body: isLoading
           ? Container(
@@ -53,17 +55,24 @@ class _SignUpState extends State<SignUp> {
               ),
             )
           : Container(
+            // ListView : true,
               padding: EdgeInsets.symmetric(horizontal: 24),
-              child: Column(
+              child: ListView(
                 children: [
-                  Spacer(),
+                  // Spacer(),
+                   SizedBox(
+                    height: 100,
+                  ),
                   Center(
                     child: Image.asset(
                       "assets/images/logo.png",
                       height: 100,
                     ),
                   ),
-                  Spacer(),
+                  // Spacer(),
+                   SizedBox(
+                    height: 80,
+                  ),
                   Form(
                     key: formKey,
                     child: Column(
@@ -159,8 +168,8 @@ class _SignUpState extends State<SignUp> {
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => SignIn()),
-                          );
+                            MaterialPageRoute(builder: (context) => Authenticate(),
+                          ));
                         },
                         child: Text(
                           "Sign In",

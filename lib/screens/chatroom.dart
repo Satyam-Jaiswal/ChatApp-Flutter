@@ -1,5 +1,6 @@
 // import 'package:Chatapp/widgets/widgets.dart';
-import 'package:Chatapp/screens/signin.dart';
+import 'package:Chatapp/necessities/authenticate.dart';
+// import 'package:Chatapp/screens/signin.dart';
 import 'package:Chatapp/services/auth.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +25,7 @@ class _ChatRoomState extends State<ChatRoom> {
           GestureDetector(
             onTap: () {
              authService.signOut() ;
-             Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => SignIn(),));
+             Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Authenticate(),));
             },
             child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16),
